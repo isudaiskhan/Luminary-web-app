@@ -35,7 +35,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
     type: "student",
   });
 
-  const navItems = ["Features", "Courses", "Pricing", "About"];
+  const navItems = ["Features", "Courses", "About"];
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -163,28 +163,15 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
             </div>
 
             {/* Right Side */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 cursor-pointer">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsRegisterOpen(true)}
-                className="hidden md:flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-600 hover:to-indigo-700"
+                className="hidden md:flex items-center gap-2 px-4 cursor-pointer py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-600 hover:to-indigo-700"
               >
                 <User className="w-4 h-4" />
                 Register
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-muted transition-colors"
-              >
-                {isDark ? (
-                  <Sun className="w-5 h-5 text-yellow-400" />
-                ) : (
-                  <Moon className="w-5 h-5 text-slate-700" />
-                )}
               </motion.button>
 
               <button

@@ -355,7 +355,7 @@ export default function Hero() {
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden ">
                   {/* ✅ Replace with your own image */}
                   <Image
-                    src="/hero-image.png" // ← change this path to your image
+                    src="/hero-image.png"
                     alt="Learning Illustration"
                     fill
                     className="object-contain"
