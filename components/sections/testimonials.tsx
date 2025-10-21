@@ -203,7 +203,7 @@ function RegistrationDialog({
                 transition={{ delay: 0.1 }}
                 className="text-2xl font-bold text-gray-900 dark:text-white text-center"
               >
-                Schedule a Consultation
+                Schedule a Discussion
               </motion.h2>
               <button
                 onClick={onClose}
@@ -283,7 +283,7 @@ function RegistrationDialog({
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   <FileText className="w-4 h-4" />
                   {formData.type === "student"
-                    ? "What would you like to discuss?"
+                    ? "When would be a good time to reach you"
                     : "Tell us about your consultation needs"}
                 </label>
                 <textarea
@@ -295,7 +295,7 @@ function RegistrationDialog({
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 resize-none"
                   placeholder={
                     formData.type === "student"
-                      ? "Tell us what you'd like to discuss in the consultation..."
+                      ? "Tell us what you'd like to discuss ..."
                       : "Describe what you'd like to achieve through partnership..."
                   }
                 />
@@ -317,7 +317,7 @@ function RegistrationDialog({
                 }`}
               >
                 <User className="w-5 h-5" />
-                {isSubmitting ? "Submitting..." : "Schedule Consultation"}
+                {isSubmitting ? "Submitting..." : "Schedule Discussion"}
               </motion.button>
             </form>
           </motion.div>
@@ -856,7 +856,7 @@ export default function PartnershipSection() {
                 boxShadow: "0 0 50px rgba(111, 77, 243, 0.6)",
               }}
             >
-              Schedule a Consultation
+              Schedule a Dissussion
             </motion.button>
           </motion.div>
         </div>
