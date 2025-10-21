@@ -207,7 +207,7 @@ function RegistrationDialog({
               </motion.h2>
               <button
                 onClick={onClose}
-                className="absolute right-4 top-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="absolute right-4 cursor-pointer top-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -310,7 +310,7 @@ function RegistrationDialog({
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 text-white rounded-lg font-semibold shadow-lg flex items-center justify-center gap-2 transition-all duration-300 ${
+                className={`w-full py-4 text-white cursor-pointer rounded-lg font-semibold shadow-lg flex items-center justify-center gap-2 transition-all duration-300 ${
                   isSubmitting
                     ? "bg-gray-400 cursor-not-allowed"
                     : "bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
