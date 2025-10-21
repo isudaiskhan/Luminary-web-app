@@ -96,8 +96,6 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
         type: "student",
       });
       setIsRegisterOpen(false);
-
-      // Success notification
       toast.success("Thank you for registering! We'll get back to you soon.", {
         position: "top-right",
         autoClose: 5000,
