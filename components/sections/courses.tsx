@@ -242,16 +242,6 @@ export default function Courses() {
                       <span className="text-2xl font-bold gradient-text">
                         {course.price}
                       </span>
-                      <motion.div
-                        animate={{ opacity: [0.5, 1, 0.5] }}
-                        transition={{
-                          duration: 2,
-                          repeat: Number.POSITIVE_INFINITY,
-                        }}
-                        className="flex items-center gap-1 text-xs text-green-500 mt-1"
-                      >
-                        <TrendingUp className="w-3 h-3" /> Trending
-                      </motion.div>
                     </div>
                     <motion.button
                       whileHover={{
