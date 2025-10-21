@@ -57,6 +57,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
       phone: formData.phone,
       countryCode: "+92",
       description: formData.description,
+      type: formData.type, // Added type field
     };
 
     try {
@@ -395,7 +396,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-4 text-white rounded-lg font-semibold shadow-lg flex items-center justify-center gap-2 transition-all duration-300 ${
+                  className={`w-full py-4 cursor-pointer text-white rounded-lg font-semibold shadow-lg flex items-center justify-center gap-2 transition-all duration-300 ${
                     isSubmitting
                       ? "bg-gray-400 cursor-not-allowed"
                       : "bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700"
