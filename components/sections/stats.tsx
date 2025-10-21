@@ -60,7 +60,7 @@ export default function Stats() {
   }, []);
 
   useEffect(() => {
-    const targets = [500, 5, 10, 195];
+    const targets = [50, 5, 20, 10];
     const timers = targets.map((target, index) => {
       let current = 0;
       const increment = target / 30;
@@ -119,7 +119,7 @@ export default function Stats() {
               </motion.div>
 
               <motion.h3 className="text-4xl font-bold gradient-text mb-2">
-                {counts[index]}K+
+                {counts[index]}+
               </motion.h3>
               <p className="text-muted-foreground font-medium">{stat.label}</p>
 
