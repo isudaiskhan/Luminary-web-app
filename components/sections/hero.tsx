@@ -324,13 +324,13 @@ export default function Hero() {
               >
                 <motion.div whileHover={{ scale: 1.05 }}>
                   <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    50K+
+                    50+
                   </p>
                   <p className="text-sm text-slate-400">Active Students</p>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }}>
                   <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    1000+
+                    30+
                   </p>
                   <p className="text-sm text-slate-400">Expert Courses</p>
                 </motion.div>
