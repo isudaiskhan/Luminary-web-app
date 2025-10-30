@@ -309,7 +309,7 @@ export default function Navbar({}: NavbarProps) {
                         Country Code
                       </label>
                       <input
-                        type="text"
+                        type="number"
                         name="countryCode"
                         value={formData.countryCode}
                         onChange={handleInputChange}
