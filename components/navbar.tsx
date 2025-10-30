@@ -28,6 +28,7 @@ export default function Navbar({}: NavbarProps) {
     name: "",
     email: "",
     phone: "",
+    countryCode: "",
     description: "",
     type: "student",
   });
@@ -52,7 +53,7 @@ export default function Navbar({}: NavbarProps) {
       firstName: formData.name.split(" ")[0] || formData.name,
       lastName: formData.name.split(" ")[1] || "",
       phone: formData.phone,
-      countryCode: "+92",
+      countryCode: formData.countryCode,
       description: formData.description,
       type: formData.type,
     };
@@ -89,6 +90,7 @@ export default function Navbar({}: NavbarProps) {
         name: "",
         email: "",
         phone: "",
+        countryCode: "",
         description: "",
         type: "student",
       });
@@ -299,18 +301,41 @@ export default function Navbar({}: NavbarProps) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    <Phone className="w-4 h-4" /> Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Enter your phone number"
-                  />
+                  <div className="flex gap-2">
+                    {/* Country Code */}
+                    <div className="flex-1">
+                      <label className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        <Phone className="w-4 h-4" />
+                        Country Code
+                      </label>
+                      <input
+                        type="text"
+                        name="countryCode"
+                        value={formData.countryCode || "+966"}
+                        onChange={handleInputChange}
+                        required
+                        className="w-28 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        placeholder="+966"
+                      />
+                    </div>
+
+                    {/* Phone Number */}
+                    <div className="flex-1">
+                      <label className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        <Phone className="w-4 h-4" />
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        placeholder="Enter your phone number"
+                      />
+                    </div>
+                  </div>
                 </motion.div>
 
                 {/* User Type */}
