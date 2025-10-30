@@ -274,7 +274,7 @@ export default function Courses() {
               boxShadow: "0 0 40px rgba(111, 77, 243, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-primary text-white rounded-lg font-semibold hover:shadow-lg transition-all text-lg"
+            className="px-10 py-4 bg-primary text-white cursor-pointer rounded-lg font-semibold hover:shadow-lg transition-all text-lg"
           >
             Explore All Courses
           </motion.button>

@@ -1,9 +1,9 @@
 "use client";
 
+import type React from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Sun,
-  Moon,
   Menu,
   X,
   User,
@@ -18,12 +18,9 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-interface NavbarProps {
-  isDark: boolean;
-  toggleTheme: () => void;
-}
+type NavbarProps = {};
 
-export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
+export default function Navbar({}: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,7 +54,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
       phone: formData.phone,
       countryCode: "+92",
       description: formData.description,
-      type: formData.type, // Added type field
+      type: formData.type,
     };
 
     try {
@@ -79,7 +76,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: isDark ? "dark" : "light",
+          theme: "dark",
         });
         setIsSubmitting(false);
         return;
@@ -103,7 +100,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        theme: isDark ? "dark" : "light",
+        theme: "dark",
       });
     } catch (error) {
       console.error("Network error:", error);
@@ -113,7 +110,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        theme: isDark ? "dark" : "light",
+        theme: "dark",
       });
     } finally {
       setIsSubmitting(false);
@@ -251,7 +248,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
                   onClick={() => setIsRegisterOpen(false)}
                   className="absolute right-4 top-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5 cursor-pointer" />
                 </button>
               </div>
 
@@ -333,7 +330,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
                       onClick={() =>
                         setFormData((prev) => ({ ...prev, type: "student" }))
                       }
-                      className={`p-4 rounded-lg border-2 transition-all duration-200 flex items-center justify-center gap-2 ${
+                      className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${
                         formData.type === "student"
                           ? "border-purple-500 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300"
                           : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-purple-300 dark:hover:border-purple-600"
@@ -348,7 +345,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
                       onClick={() =>
                         setFormData((prev) => ({ ...prev, type: "teacher" }))
                       }
-                      className={`p-4 rounded-lg border-2 transition-all duration-200 flex items-center justify-center gap-2 ${
+                      className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${
                         formData.type === "teacher"
                           ? "border-purple-500 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300"
                           : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-purple-300 dark:hover:border-purple-600"
