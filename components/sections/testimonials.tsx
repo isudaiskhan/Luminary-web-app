@@ -93,7 +93,7 @@ function RegistrationDialog({
     phone: "",
     countryCode: "",
     description: "",
-    type: "student",
+    type: "investor",
   });
 
   const handleInputChange = (
@@ -116,6 +116,7 @@ function RegistrationDialog({
       phone: formData.phone,
       countryCode: formData.countryCode,
       description: formData.description,
+      type: "investor",
     };
 
     try {
@@ -152,7 +153,7 @@ function RegistrationDialog({
         phone: "",
         countryCode: "",
         description: "",
-        type: "student",
+        type: "investor",
       });
       onClose();
 
