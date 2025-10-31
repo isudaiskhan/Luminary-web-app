@@ -91,7 +91,7 @@ function RegistrationDialog({
     name: "",
     email: "",
     phone: "",
-    countryCode: "",
+    countryCode: "+966",
     description: "",
     type: "investor",
   });
@@ -275,7 +275,7 @@ function RegistrationDialog({
                       name="countryCode"
                       value={formData.countryCode}
                       onChange={handleInputChange}
-                      required
+                      readOnly
                       className="w-28 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                       placeholder="+966"
                     />
